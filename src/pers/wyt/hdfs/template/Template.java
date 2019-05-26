@@ -5,13 +5,14 @@ import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IOUtils;
+import org.apache.log4j.BasicConfigurator;
 
 import java.io.*;
 import java.net.URI;
 
 public class Template {
 
-    private static String HDFSUri = "hdfs://localhost:9000";
+    private static String HDFSUri = "hdfs://192.168.199.105:9000";
 
     public static FileSystem getFileSystem() {
         /**
@@ -194,7 +195,6 @@ public class Template {
          * @param: [args]
          * @return: void
          */
-
         // 连接fs
         FileSystem fs = getFileSystem();
         System.out.println("已连接到HDFS");
